@@ -1,7 +1,7 @@
 {
   "name": "klar",
   "description": "A tool to infer and generate static type definitions of resources returned by backend APIs.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src/index.js",
   "license": "MIT",
   "keywords": [
