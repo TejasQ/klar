@@ -10,9 +10,9 @@ const meow = require("meow");
 const ora = require("ora");
 const isOnline = require("is-online");
 
-const cliConfig = require(resolve(__dirname, "./cli"));
-const { getPath, getResolver } = require(__dirname, "./util");
-const transform = require(resolve(__dirname, "./transform"));
+const cliConfig = require(resolve(__dirname, "./cli")); // eslint-disable-line import/no-dynamic-require
+const { getPath, getResolver } = require(resolve(__dirname, "./util")); // eslint-disable-line import/no-dynamic-require
+const transform = require(resolve(__dirname, "./transform")); // eslint-disable-line import/no-dynamic-require
 
 const cli = meow(cliConfig.help, cliConfig.options);
 const { prefix, outDir = ".", dataProp, graphql, flow, configFile } = cli.flags;
