@@ -100,7 +100,13 @@ const transform = babel => {
                 if (t.isAssignmentExpression(exitPath.parent)) {
                   return;
                 }
-                exitPath.replaceWith(t.identifier(getKey(exitPath)));
+                exitPath.replaceWith(
+                  t.identifier(
+                    opts.prefix
+                      ? `${opts.prefix}${getKey(exitPath)}`
+                      : getKey(exitPath),
+                  ),
+                );
               },
             },
           });
